@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Input from './components/Input';
+import Notes from './components/Notes';
 
 function App() {
+  const [notes,setNotes] = useState([]); // an array of notes
+
+  const handleDeleteNote = (index) => {
+    setNotes((prevNotes) => prevNotes.filter((_, i) => i !== index));
+  };
+  //justt deleting based on keyval(index). have only things which dont match the index
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Notes App</h1>
+      <Input setNotefn={setNotes}/>
+      <Notes notes={notes} onDelete={handleDeleteNote}/>
     </div>
   );
 }
