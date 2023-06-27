@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Input({setNotefn }) {
+function Input({setNotefn, setLoadingfn,setPageUpdatedfn}) {
   const [variable, setVar] = useState('');
   const [title, setTitle] = useState('');
 
@@ -9,16 +9,25 @@ function Input({setNotefn }) {
     if(variable!==''||title!=='')
     {
       const newNote = { notecontent: variable, titleName: title };
+      setLoadingfn(true);
 
-      axios.post('https://21d6-103-191-90-42.ngrok-free.app/api/v1/googleNotes', newNote)
-      .then((response) => {
-      console.log('HI');
-      setNotefn(prevNotes => [...prevNotes, response.data]);
-      setVar('');
-      setTitle('');
+      axios.post('https://21d6-103-191-90-42.ngrok-free.app/api/v1/googleNotes', newNote,{
+        headers: {
+          'ngrok-skip-browser-warning': '69420'
+        }
+      }) 
+          .then((response) => {
+          console.log('HI');
+          setNotefn(prevNotes => [...prevNotes, response.data]);
+          setVar('');
+          setTitle('');
     })
     .catch((error) => {
       console.error('Error adding note:', error);
+    })
+    .finally(() => {
+      setLoadingfn(false);
+      setPageUpdatedfn((current) => !current);
     });
     }
   }
@@ -47,6 +56,7 @@ function Input({setNotefn }) {
       <br></br>
       <br></br>
       <button onClick={addNote}>Add Note</button>
+      
     </div>
   );
 }
