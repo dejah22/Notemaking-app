@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 
-function ColorPicker({setColor, note, setLoadingfn, setPageUpdatedfn}){
+function ColorPicker({setColor, note, setLoadingfn,setPageUpdatedfn}){
 
   const handleColorChange = (selectedColor) => {
     setColor(selectedColor);
@@ -13,7 +13,7 @@ function ColorPicker({setColor, note, setLoadingfn, setPageUpdatedfn}){
 
     setLoadingfn(true);
     axios
-      .put(`https://21d6-103-191-90-42.ngrok-free.app/api/v1/googleNotes/${note.id}`, updatedNote,{
+      .put(`https://21d6-103-191-90-42.ngrok-free.app/api/v1/google-notes/${note.id}`, updatedNote,{
         headers: {
           'ngrok-skip-browser-warning': '69420'
         }

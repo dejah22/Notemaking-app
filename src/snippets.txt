@@ -1,0 +1,12 @@
+      <div className="selected-labels">
+        {selectedLabels.map((label) => (
+          <div key={label.id} className="selected-label">
+            {label.name}
+          </div>
+        ))}
+      </div>
+
+This is to print the selected label in AddLabel
+
+
+<img className='pinicon'src={PinIcon} alt="Pin" onClick={handlePin} />

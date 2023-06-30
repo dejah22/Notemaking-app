@@ -1,11 +1,13 @@
 .App {
   text-align: center;
+  background-color: aliceblue;
 }
+
 #addtitle{
   border-width: 2px;
   border-color: rgb(52, 52, 110);
   border-radius: 10px;
-  width: 500px;
+  width: 600px;
   height: 40px;
   font-size: 20px;
 }
@@ -13,10 +15,20 @@
   border-width: 2px;
   border-color: rgb(52, 52, 110);
   border-radius: 10px;
-  width: 500px;
-  height: 65px;
+  width: 600px;
+  height: 85px;
   font-size: 20px;
 }
+#add-label{
+  margin: 5px;
+  width: 300px;
+}
+#addlabel{
+  width: 800px;
+  height: 105px;
+  font-size: 20px;
+}
+
 .flex-container {
   display: flex;
   float: left;
@@ -29,9 +41,26 @@
   border: 2px solid black;
   border-radius: 15px;
   min-width: 200px;
+  max-width: 400px;
   padding: 20px;
   display: inline;
   list-style-type: none;
+}
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.grid-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-section ul > li {
+  flex: 1 0 100%;
+  margin-bottom: 10px;
 }
 
 .dot1 {
@@ -82,6 +111,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(210, 230, 255, 0.677);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,13 +153,80 @@
 }
 
 button{
-  font-size: 15px;
-  border: 1px solid black;
-  background-color: #f4fdff95;
+  font-size: 16px;
+  border-color: rgb(31, 31, 70);
+  border-width: 1.5px;
+  background-color: #edf2fa84;
   border-radius: 5px;
-  margin: 5px;
+  margin: 15px;
   padding-left: 10px;
   padding-top: 5px;
   padding-right: 10px;
   padding-bottom: 5px;
+}
+
+.search{
+  align-self: flex-start;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-width: 2px;
+  border-color: rgb(52, 52, 110);
+  border-radius: 20px;
+  width: 300px;
+  height: 25px;
+  font-size: 15px;
+}
+.label-picker{
+  display: flex;
+  align-items: center;
+  margin-left: 33%;
+}
+#createlabel{
+  border-radius: 5px;
+  margin: 5px;
+  height: 20px;
+  border-color: rgb(178, 178, 233);
+  border-width: 2px;
+  text-align: center;  
+}
+#createlabelbutton{
+  font-size: 14px;
+  border-color: rgb(52, 52, 110);
+  border-width: 1px;
+  background-color: #d1dcfd64;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.pinicon {
+  align-self:flex-start;
+  width:20px;
+  height: 20px;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.blur-background {
+  filter: blur(8px); /* Adjust the blur intensity as needed */
+  pointer-events: none; /* Prevent interaction with the blurred elements */
+}
+
+.no-notes{
+  color: gray;
+  margin: 150px;
 }
