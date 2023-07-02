@@ -67,10 +67,10 @@ function SingleNote({ note, keyval, labels, onDelete, setLoadingfn, setPageUpdat
       });
   };
 
-  const handlePin = () => {
+  const handlePin = (isPin) => {
     const updatedNote = {
       ...note,
-      pinned: true,
+      pinned: isPin,
     };
     setLoadingfn(true);
     axios
@@ -83,34 +83,12 @@ function SingleNote({ note, keyval, labels, onDelete, setLoadingfn, setPageUpdat
         setPageUpdatedfn((current) => !current);
       })
       .catch((error) => {
-        console.error('Error pinning note:', error);
+        console.error('Error updating pin on note:', error);
       })
       .finally(() => {
         setLoadingfn(false);
       });
-  };
-  const handleUnpin = () => {
-    const updatedNote = {
-      ...note,
-      pinned: false,
-    };
-    setLoadingfn(true);
-    axios
-      .put(`https://21d6-103-191-90-42.ngrok-free.app/api/v1/google-notes/${note.id}`, updatedNote, {
-        headers: {
-          'ngrok-skip-browser-warning': '69420',
-        },
-      })
-      .then(() => {
-        setPageUpdatedfn((current) => !current);
-      })
-      .catch((error) => {
-        console.error('Error unpinning note:', error);
-      })
-      .finally(() => {
-        setLoadingfn(false);
-      });
-  };
+  };  
   
 
   return (
