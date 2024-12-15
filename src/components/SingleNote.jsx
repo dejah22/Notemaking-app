@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ColorPicker from './ColorPicker';
 import EditLabel from './EditLabel';
-import PinIcon from './pin-26.svg';
-import UnpinIcon from './unpin-svgrepo-com.svg'
+import PinIcon from '../icons/pin-26.svg';
+import UnpinIcon from '../icons/unpin-svgrepo-com.svg'
 
 function SingleNote({ note, keyval, labels, onDelete, setLoadingfn, setPageUpdatedfn }) {
   const [color, setColor] = useState('');
@@ -96,9 +96,9 @@ function SingleNote({ note, keyval, labels, onDelete, setLoadingfn, setPageUpdat
       
       <div id="singlenoteitem" style={{ backgroundColor: note.color }}>
       {!note.pinned ? (
-  <img className="pinicon" src={PinIcon} alt="Pin" onClick={handlePin} />
+  <img className="pinicon" src={PinIcon} alt="Pin" onClick={()=>handlePin(true)} />
 ) : (
-  <img className="pinicon" src={UnpinIcon} alt="Unpin" onClick={handleUnpin} />
+  <img className="pinicon" src={UnpinIcon} alt="Unpin" onClick={()=>handlePin(false)} />
 )}
         <h2 style={{ textAlign: 'left' }}>{note.titleName}</h2>
         
