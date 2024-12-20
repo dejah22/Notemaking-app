@@ -7,14 +7,14 @@ An intuitive, minimalist and visually appealing note-making app for seamless not
 Its a React Single Page Application (SPA) that provides an aesthetically elegant layout, letting you create and pin colourful sticky notes onto your browser screen.
 
 - Users directly land on the Notes Page 📝, and can `View`, `Add`, `Edit`, or `Delete` notes, and can even `Label` up 🏷️ and `Search` 🔍 for their Notes!
-- Notes can be `colour co-ordinated` and organised using labels for a productive management. 🎨
+- Notes can be `colour co-ordinated` 🎨 and organised using labels for a productive management.
 - It also offers a `Pin/Unpin` feature 📌, where your most important notes for the day can be pinned to the top, away from all the clutter.
 
-All notes are saved on this backend server, and sorted and displayed based on the last modified date.
+All notes are saved on [this](https://github.com/dejah22/Notemaking-app-server) backend server, and sorted and displayed based on the last modified date.
 
 ## Tech Stacks used
 
-The UI is built using React ^18.2.0, and uses simple CSS for styling the screens. It connects to a hosted SpringBoot API Service (you can find it here) using the axios library, where all notes are saved, and CRUD operations are done.
+The UI is built using REACT ^18.2.0, and uses simple CSS for styling the screens. It connects to a hosted SpringBoot API Service (you can find it [here](https://github.com/dejah22/Notemaking-app-server)) using the `axios` library, where all notes are saved, and CRUD operations are done.
 
 ## Instructions
 
