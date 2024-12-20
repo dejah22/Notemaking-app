@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Pretty Notes app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An intuitive, minimalist and visually appealing note-making app for seamless note-taking. ✨ 🗒️
 
-## Available Scripts
+## What It Does
 
-In the project directory, you can run:
+Its a React Single Page Application (SPA) that provides an aesthetically elegant layout, letting you create and pin colourful sticky notes onto your browser screen.
 
-### `npm start`
+- Users directly land on the Notes Page 📝, and can `View`, `Add`, `Edit`, or `Delete` notes, and can even `Label` up 🏷️ and `Search` 🔍 for their Notes!
+- Notes can be `colour co-ordinated` and organised using labels for a productive management. 🎨
+- It also offers a `Pin/Unpin` feature 📌, where your most important notes for the day can be pinned to the top, away from all the clutter.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+All notes are saved on this backend server, and sorted and displayed based on the last modified date.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stacks used
 
-### `npm test`
+The UI is built using React ^18.2.0, and uses simple CSS for styling the screens. It connects to a hosted SpringBoot API Service (you can find it here) using the axios library, where all notes are saved, and CRUD operations are done.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instructions
 
-### `npm run build`
+The repo follows a simple and intuitive structure. To run the application -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Setup the SpringBoot service using the instructions from this repo
+2. Once the backend is up and running, run the React project.
+3. In the project directory, you can run: `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Runs the app in the development mode.
+   - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - The page will reload when you make changes. You may also see any lint errors in the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributions
 
-### `npm run eject`
+Contributions are what make this open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks! <3
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## A glance
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="center">
+  <img src="screenshots/app-layout.png" alt="alt text" style="width:98%; border-radius: 8px;"/>
+</p>
 
-## Learn More
+<!-- ![alt text](screenshots/picking-label.png)
+![alt text](screenshots/separate-pinned-note.png) -->
+<p align="center">
+  <img src="screenshots/picking-label.png" alt="alt text" style="width:49%; border-radius: 4px;"/>
+  <img src="screenshots/separate-pinned-note.png" alt="alt text" style="width:49%; border-radius: 4px;"/>
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  <img src="screenshots/edit-note.png" alt="alt text" style="width:98%; border-radius: 8px;"/>
+</p>
