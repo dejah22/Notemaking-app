@@ -14,15 +14,18 @@ All notes are saved on [this](https://github.com/dejah22/Notemaking-app-server) 
 
 ## Tech Stacks used
 
-The UI is built using REACT ^18.2.0, and uses simple CSS for styling the screens. It connects to a hosted SpringBoot API Service (you can find it [here](https://github.com/dejah22/Notemaking-app-server)) using the `axios` library, where all notes are saved, and CRUD operations are done.
+The UI is built using REACT ^18.2.0, and uses simple CSS for styling the screens. It connects to a hosted SpringBoot API Service using the `axios` library, where all notes are saved, and CRUD operations are done.
 
 ## Instructions
 
 The repo follows a simple and intuitive structure. To run the application -
 
-1. Setup the SpringBoot service using the instructions from this repo
-2. Once the backend is up and running, run the React project.
-3. In the project directory, you can run: `npm start`
+1. Setup `node` and `npm` in your local system.
+2. Clone this repository using `git clone <URL>`.
+3. Setup the SpringBoot service using the instructions from [this](https://github.com/dejah22/Notemaking-app-server) repo.
+4. Update the API URLs in the axios calls, with your newly exposed URLs
+5. Once the backend is up and running, run the React project.
+    In the project directory, you can run: `npm start`
 
    - Runs the app in the development mode.
    - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
